@@ -5,8 +5,6 @@ livro = [
     'Algoritmos',
     'JavaScript',
     'Banco de Dados'];
-
-livro.push();
 console.log(livro);
 console.log();
 //#endregion
@@ -44,4 +42,25 @@ console.log('Parte 5 – Atualizando Informações:');
 livro[1] = 'Programação Web';
 console.log(livro);
 console.log();
+//#endregion
+
+// #region Desafio Extra 1
+console.log('--------------------');
+console.log('Desafio Extra 1');
+livro.push(
+    'Engenharia de Software',
+    'Governança de TI',
+    'Práticas de Programação'
+    )
+console.log(livro.length);
+//#endregion
+
+// #region Desafio Extra 2
+console.log('--------------------');
+console.log('Desafio Extra 2');
+//#endregion
+
+// #region Desafio Avançado
+console.log('--------------------');
+console.log('Desafio Avançado');
 //#endregion
