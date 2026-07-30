@@ -15,3 +15,9 @@ livro.unshift('Lógica de Programação');
 
 console.log(livro);
 //#endregion
+
+// #region Parte 3 – Consultando Informações
+console.log(livro[0]);
+console.log(livro[livro.length - 1]);
+console.log(livro.length)
+//#endregion
