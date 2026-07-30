@@ -67,4 +67,17 @@ for(i in livro){
 // #region Desafio Avançado
 console.log('--------------------');
 console.log('Desafio Avançado');
+emprestados = [];
+
+console.log('Emprestados: ');
+console.log(emprestados);
+console.log('Livro: ');
+console.log(livro);
+
+emprestados.push(livro.pop());
+
+console.log('Emprestados: ');
+console.log(emprestados);
+console.log('Livro: ');
+console.log(livro);
 //#endregion
