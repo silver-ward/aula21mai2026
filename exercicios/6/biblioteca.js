@@ -58,6 +58,10 @@ console.log(livro.length);
 // #region Desafio Extra 2
 console.log('--------------------');
 console.log('Desafio Extra 2');
+
+for(i in livro){
+    console.log(`Livro ${String(Number(i) + 1)}: ${livro[i]}.`)
+}
 //#endregion
 
 // #region Desafio Avançado
