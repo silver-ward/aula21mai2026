@@ -19,11 +19,16 @@ console.log(livro);
 // #region Parte 3 – Consultando Informações
 console.log(livro[0]);
 console.log(livro[livro.length - 1]);
-console.log(livro.length)
+console.log(livro.length);
 //#endregion
 
 // #region Parte 4 – Removendo Livros
 livro.pop(livro.length - 1);
-livro.shift(livro[0])
+livro.shift(livro[0]);
+console.log(livro);
+//#endregion
+
+// #region Parte 5 – Atualizando Informações
+livro[1] = 'Programação Web';
 console.log(livro);
 //#endregion
