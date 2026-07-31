@@ -5,6 +5,7 @@ livro = [
     'Algoritmos',
     'JavaScript',
     'Banco de Dados'];
+console.log('\narray inicial:');
 console.log(livro);
 console.log();
 //#endregion
@@ -14,6 +15,7 @@ console.log('--------------------');
 console.log('Parte 2 – Inserindo Novos Livros:');
 livro.push('Redes de Computadores');
 livro.unshift('Lógica de Programação');
+console.log('\narray após as inserções: ')
 console.log(livro);
 console.log();
 //#endregion
@@ -21,8 +23,11 @@ console.log();
 // #region Parte 3 – Consultando Informações
 console.log('--------------------');
 console.log('Parte 3 – Consultando Informações:');
+console.log('\nprimeiro livro:');
 console.log(livro[0]);
+console.log('\núltimo livro:');
 console.log(livro[livro.length - 1]);
+console.log('\nquantidade de livros:');
 console.log(livro.length);
 console.log();
 //#endregion
@@ -32,6 +37,7 @@ console.log('--------------------');
 console.log('Parte 4 – Removendo Livros:');
 livro.pop(livro.length - 1);
 livro.shift(livro[0]);
+console.log('\narray após as remoções:');
 console.log(livro);
 console.log();
 //#endregion
@@ -40,6 +46,7 @@ console.log();
 console.log('--------------------');
 console.log('Parte 5 – Atualizando Informações:');
 livro[1] = 'Programação Web';
+console.log('\narray atualizado:');
 console.log(livro);
 console.log();
 //#endregion
