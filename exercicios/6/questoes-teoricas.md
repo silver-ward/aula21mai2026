@@ -21,6 +21,8 @@ Dessa forma, para referenciar o primeiro elemento de um array 'conjunto', utiliz
 
 ## 5 Para que serve a propriedade `length`?
 
+Essa propriedade retorna a quantidade de elementos armazenados em um array.
+
 ## 6 Como acessar o último elemento de um array sem informar um indice fixo?
 
 ## 7 Por que utilizar arrays em vez de criar uma variável para cada informaçao?
