@@ -10,9 +10,14 @@ Dessa forma, para referenciar o primeiro elemento de um array 'conjunto', utiliz
 ## 3 Qual é a diferença entre `push()` e `unshift()`?
 
 `push()` adiciona um elemento na posição do último elemento + 1, ou seja, ao final da lista.
+
 `unshift()` adiciona um elemento na primeira posição, ou seja, no começo da lista.
 
 ## 4 Qual é a diferença entre `pop()` e `shift()`?
+
+`pop()` remove o último elemento do array.
+
+`shift()` remove o primeiro elemento do array.
 
 ## 5 Para que serve a propriedade `length`?
 
