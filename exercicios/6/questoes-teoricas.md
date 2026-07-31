@@ -1,5 +1,7 @@
 ## 1 O que é um array?
 
+É um objeto que permite armazenar uma coleção de itens sob uma mesma variável;
+
 ## 2 Como os elementos de um array são organizados?
 
 ## 3 Qual é a diferença entre `push()` e `unshift()`?
