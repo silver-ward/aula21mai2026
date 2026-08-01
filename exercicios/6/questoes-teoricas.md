@@ -25,4 +25,22 @@ Essa propriedade retorna a quantidade de elementos armazenados em um array.
 
 ## 6 Como acessar o último elemento de um array sem informar um indice fixo?
 
+Em um array 'conjunto', o último elemento pode ser acessado dinamicamente usando a propriedade `length` - 1.
+
+se `conjunto = ['a', 'b', 'c']`
+
+então `conjunto.length` será igual a 3.
+
+podemos então usar conjunto.length para acessar o elemento equivalente ao próprio tamanho do array:
+
+`conjunto[conjunto.length]`
+
+Entretanto, a indexação do array começa a partir do zero, então o elemento `'c'` está na posição `[2]`.
+
+Enquanto isso, a contagem do array começa a partir do um, então o elemento `'c'` é considerado o 3o item.
+
+Para compensar essa diferença, podemos simplesmente buscar a quantidade de elementos do array, subtrair 1, e usar esse resultado para acessar o valor equivalente ao último elemento indexado no array:
+
+`conjunto[conjunto.length - 1]`
+
 ## 7 Por que utilizar arrays em vez de criar uma variável para cada informaçao?
