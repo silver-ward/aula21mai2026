@@ -5,7 +5,7 @@
 ## 2 Como os elementos de um array são organizados?
 
 Os elementos são indexados por números naturais a partir do 0.
-Dessa forma, para referenciar o primeiro elemento de um array 'conjunto', utiliza-se `conjunto[0]`.
+Dessa forma, para referenciar o primeiro elemento de um array "conjunto", utiliza-se `conjunto[0]`.
 
 ## 3 Qual é a diferença entre `push()` e `unshift()`?
 
