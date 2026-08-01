@@ -44,3 +44,7 @@ Para compensar essa diferença, podemos simplesmente buscar a quantidade de elem
 `conjunto[conjunto.length - 1]`
 
 ## 7 Por que utilizar arrays em vez de criar uma variável para cada informaçao?
+
+Pelo mesmo motivo que utilizamos uma variável em vez da informação pura: para facilitar a referência dessa informação em outras partes do código. Se um fluxo processa 10 elementos, fica bem mais fácil referenciar um único array que aponta para os 10 elementos do que referenciar cada elemento em si pelo nome da sua variável individual.
+
+Além disso, utilizamos arrays quando a união das informações em si tem relevância. Por exemplo, consideremos uma variável que diz se o usuário está logado, outra que diz se o usuário é premium e uma última que diz se o usuário é aluno, professor ou administrador. Se o programa precisa avaliar a informação dessas três variáveis em conjunto para todas as requisições de acesso, talvez seja oportuno refatorar o código para que as três informações sejam referenciáveis por um único array.
