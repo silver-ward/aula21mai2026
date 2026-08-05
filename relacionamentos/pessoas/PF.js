@@ -1,10 +1,10 @@
 const Pessoa = require('./Pessoa');
-//const Titulo = require('./Titulo');
+const Titulo = require('./Titulo');
 
 class PF extends Pessoa {
 
     #cpf;
- //   #titulo;
+    #titulo;
 
     setCPF(cpf) {
         if (cpf) {
@@ -19,7 +19,7 @@ class PF extends Pessoa {
         return this.#cpf;
     }
 
- /*   setTitulo(titulo) {
+    setTitulo(titulo) {
         if (titulo instanceof Titulo) {
             this.#titulo = titulo;
             titulo.setPF(this);
@@ -31,7 +31,7 @@ class PF extends Pessoa {
 
     getTitulo() {
         return this.#titulo;
-    } */
+    } 
 
 }
 

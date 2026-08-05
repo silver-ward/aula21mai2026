@@ -5,7 +5,7 @@ class Telefone {
     #numero;
     #pessoas = [];
 
-    setPessoa(pessoa) {
+    addPessoa(pessoa) {
         if (pessoa) {
             this.#pessoas.push(pessoa);
             return true;

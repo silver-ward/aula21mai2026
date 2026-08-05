@@ -6,7 +6,7 @@ class Endereco {
     #cep;
     #pessoas = [];
 
-    setPessoa(pessoa) {
+    addPessoa(pessoa) {
         if (pessoa) {
             this.#pessoas.push(pessoa);
             return true;
