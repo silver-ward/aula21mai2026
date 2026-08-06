@@ -5,6 +5,7 @@ class Animal{
 
     #nome;
     #especie;
+    
     #cliente;
     #prontuario;
 
@@ -43,6 +44,8 @@ class Animal{
     setProntuario(prontuario){
         if(prontuario instanceof Prontuario){
             this.#prontuario = prontuario;
+            prontuario.setAnimal(this);
+            return true;
         }
         return false;
     }
