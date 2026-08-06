@@ -46,3 +46,5 @@ class Cliente {
         console.log(this.#animais);
     }
 }
+
+module.exports = Cliente;
