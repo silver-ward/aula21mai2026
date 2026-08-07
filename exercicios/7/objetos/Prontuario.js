@@ -1,6 +1,9 @@
+const Animal = require('./Animal.js');
+
 class Prontuario{
     #numero;
     #observacoes = [];
+    #animal;
 
     setNumero(numero){
         if (numero){
@@ -26,12 +29,16 @@ class Prontuario{
         return this.#observacoes;
     }
 
-    setAnimal(){
+    setAnimal(animal){
+        if (animal instanceof Animal){
+            this.#animal = animal;
+            animal.setProntuario(this);
+        }
         return false;
     }
 
     getAnimal(){
-        return false;
+        return this.#animal;
     }
 }
 
