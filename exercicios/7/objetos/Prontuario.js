@@ -33,6 +33,7 @@ class Prontuario{
         if (animal instanceof Animal){
             this.#animal = animal;
             animal.setProntuario(this);
+            return true;
         }
         return false;
     }

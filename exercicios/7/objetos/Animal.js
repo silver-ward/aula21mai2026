@@ -1,5 +1,6 @@
 const Cliente = require('./Cliente.js');
 const Prontuario = require('./Prontuario.js');
+const Veterinario = require('./Veterinario.js');
 
 class Animal{
 
@@ -8,6 +9,7 @@ class Animal{
     
     #cliente;
     #prontuario;
+    #veterinarios = [];
 
     setNome(nome){
         if(nome){
@@ -52,6 +54,23 @@ class Animal{
 
     getProntuario(){
         return this.#prontuario;
+    }
+
+    addVeterinario(veterinario){
+        if(veterinario instanceof Veterinario){
+            this.#veterinarios.push(veterinario);
+            veterinario.addAnimal(this);
+            return true;
+        }
+        return false;
+    }
+
+    getVeterinarios(){
+        return this.#veterinarios;
+    }
+
+    listarVeterinarios(){
+        console.log(this.#veterinarios);
     }
 }
 
