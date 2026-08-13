@@ -6,70 +6,97 @@ const Veterinario = require('./objetos/Veterinario.js');
 //#region Cliente
 const Mario = new Cliente();
 Mario.setNome('Mario');
-console.log(Mario.getNome());
+console.log('Cliente Nome: ' + Mario.getNome());
 Mario.setTelefone('11987654321');
-console.log(Mario.getTelefone());
+console.log('Cliente Telefone: ' + Mario.getTelefone());
 
+console.log('\n===============\n');
 //#endregion
 
 //#region Animal1 + Prontuario1
 const Pipo = new Animal();
 Pipo.setNome('Pipo');
-console.log(Pipo.getNome());
+console.log('Animal Nome: ' + Pipo.getNome());
 Pipo.setEspecie('Gato');
-console.log(Pipo.getEspecie());
-Pipo.setCliente(Mario);
-console.log(Pipo.getCliente().getNome());
+console.log('Animal Espécie: ' + Pipo.getEspecie());
+Mario.addAnimal(Pipo);
+console.log('Nome do Cliente Pipo: ' + Pipo.getCliente().getNome());
+
+console.log('\n----------\n');
 
 const prontuarioPipo = new Prontuario();
 prontuarioPipo.setNumero('1');
-console.log(prontuarioPipo.getNumero());
+console.log('Número Prontuário: ' + prontuarioPipo.getNumero());
 prontuarioPipo.setObservacoes('Vacina antirrábica aplicada.');
-console.log(prontuarioPipo.getObservacoes());
+console.log('Observações Prontuário: ' + prontuarioPipo.getObservacoes());
 
 Pipo.setProntuario(prontuarioPipo);
-console.log(Pipo.getProntuario().getNumero());
+console.log('Número de prontuário Pipo: ' + Pipo.getProntuario().getNumero());
+
+console.log('\n===============\n');
 //#endregion
 
 //#region Animal2 + Prontuario2
 const Mimi = new Animal();
 Mimi.setNome('Mimi');
-console.log(Mimi.getNome());
+console.log('Animal Nome: ' + Mimi.getNome());
 Mimi.setEspecie('Gato');
-console.log(Mimi.getEspecie());
-Mimi.setCliente(Mario);
-console.log(Mimi.getCliente().getNome());
+console.log('Animal Espécie: ' + Mimi.getEspecie());
+
+Mario.addAnimal(Mimi);
+console.log('Nome do Cliente Mimi: ' + Mimi.getCliente().getNome());
+
+console.log('\n----------\n');
 
 const prontuarioMimi = new Prontuario();
 prontuarioMimi.setNumero('2');
-console.log(prontuarioMimi.getNumero());
+console.log('Número Prontuário: ' + prontuarioMimi.getNumero());
 prontuarioMimi.setObservacoes('Vacina antirrábica aplicada.');
-console.log(prontuarioMimi.getObservacoes());
+console.log('Observações Prontuário: ' + prontuarioMimi.getObservacoes());
 
 Mimi.setProntuario(prontuarioMimi);
-console.log(Mimi.getProntuario().getNumero());
+console.log('Número de prontuário Mimi: ' + Mimi.getProntuario().getNumero());
+
+console.log('\n===============\n');
 //#endregion
 
 //#region Veterinario
 const Larissa = new Veterinario();
 Larissa.setNome('Larissa');
-console.log(Larissa.getNome());
+console.log('Nome Veterinário: ' + Larissa.getNome());
 Larissa.setCRMV('12345');
-console.log(Larissa.getCRMV());
+console.log('Número Veterinário: ' + Larissa.getCRMV());
+
+console.log('\n----------\n');
 
 const Rafela = new Veterinario();
 Rafela.setNome('Rafela');
-console.log(Rafela.getNome());
+console.log('Nome Veterinário: ' + Rafela.getNome());
 Rafela.setCRMV('67890');
-console.log(Rafela.getCRMV());
+console.log('Número Veterinário: ' + Rafela.getCRMV());
+
+console.log('\n----------\n');
 
 Pipo.addVeterinario(Larissa);
-console.log(Pipo.getVeterinarios());
+console.log('Veterinários Pipo: ' + Pipo.getVeterinarios());
 Mimi.addVeterinario(Larissa);
-console.log(Mimi.getVeterinarios());
+console.log('Veterinários Mimi: ' + Mimi.getVeterinarios());
+
+console.log('\n----------\n');
 
 Pipo.addVeterinario(Rafela);
-console.log(Pipo.getVeterinarios());
+console.log('Veterinários Pipo: ' + Pipo.getVeterinarios());
 Mimi.addVeterinario(Rafela);
-console.log(Mimi.getVeterinarios());
+console.log('Veterinários Mimi: ' + Mimi.getVeterinarios());
+
+console.log('\n===============\n');
 //#endregion
+
+
+console.log('Testes de listagem: \n');
+
+Mario.listarAnimais();
+console.log();
+Pipo.listarVeterinarios();
+console.log();
+Mimi.listarVeterinarios();

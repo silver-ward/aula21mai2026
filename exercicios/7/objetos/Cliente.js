@@ -42,7 +42,10 @@ class Cliente {
     }
 
     listarAnimais(){
-        console.log(this.#animais);
+        console.log(`Animais cadastrados sob cliente ${this.getNome()}: `);
+        for(let animal of this.#animais){
+            console.log('• ' + animal.getNome());
+        }
     }
 }
 

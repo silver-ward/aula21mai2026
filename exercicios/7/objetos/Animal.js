@@ -70,7 +70,11 @@ class Animal{
     }
 
     listarVeterinarios(){
-        console.log(this.#veterinarios);
+        console.log(`Veterinários cadastrados sobre pet ${this.getNome()}: `);
+
+        for(let veterinario of this.#veterinarios){
+            console.log('• ' + veterinario.getNome());
+        }
     }
 }
 
