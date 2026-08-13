@@ -1,5 +1,3 @@
-const Animal = require('./Animal.js');
-
 class Veterinario{
 
     #nome;
@@ -32,6 +30,7 @@ class Veterinario{
     }
 
     addAnimal(animal){
+        const Animal = require('./Animal.js');
         if(animal instanceof Animal){
             this.#animais.push(animal);
             return true;

@@ -1,5 +1,3 @@
-const Animal = require('./Animal.js');
-
 class Cliente {
     #nome;
     #telefone;
@@ -30,6 +28,7 @@ class Cliente {
     }
 
     addAnimal(animal){
+        const Animal = require('./Animal.js');
         if(animal instanceof Animal){
             this.#animais.push(animal);
             animal.setCliente(this);

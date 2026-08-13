@@ -1,5 +1,3 @@
-const Animal = require('./Animal.js');
-
 class Prontuario{
     #numero;
     #observacoes = [];
@@ -7,7 +5,7 @@ class Prontuario{
 
     setNumero(numero){
         if (numero){
-            #numero = numero;
+            this.#numero = numero;
             return true;
         }
         return false;
@@ -30,9 +28,9 @@ class Prontuario{
     }
 
     setAnimal(animal){
+        const Animal = require('./Animal.js');
         if (animal instanceof Animal){
             this.#animal = animal;
-            animal.setProntuario(this);
             return true;
         }
         return false;

@@ -1,7 +1,3 @@
-const Cliente = require('./Cliente.js');
-const Prontuario = require('./Prontuario.js');
-const Veterinario = require('./Veterinario.js');
-
 class Animal{
 
     #nome;
@@ -33,8 +29,10 @@ class Animal{
     }
 
     setCliente(cliente){
+        const Cliente = require('./Cliente.js');
         if(cliente instanceof Cliente){
             this.#cliente = cliente;
+            return true;
         }
         return false;
     }
@@ -44,6 +42,7 @@ class Animal{
     }
 
     setProntuario(prontuario){
+        const Prontuario = require('./Prontuario.js');
         if(prontuario instanceof Prontuario){
             this.#prontuario = prontuario;
             prontuario.setAnimal(this);
@@ -57,6 +56,7 @@ class Animal{
     }
 
     addVeterinario(veterinario){
+        const Veterinario = require('./Veterinario.js');
         if(veterinario instanceof Veterinario){
             this.#veterinarios.push(veterinario);
             veterinario.addAnimal(this);
