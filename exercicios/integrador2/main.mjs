@@ -3,7 +3,12 @@ import IEclss, { IEfunc, IEjson } from "./objetos/IE.mjs";
 
 function listAll(object){
     for(let [key, value] of Object.entries(object.getAll())){
-        console.log(`${key}: ${value}`);
+        if(value instanceof Date){
+            console.log(`${key}: ${value.toLocaleString('pt-BR')}`);
+        }
+        else{
+            console.log(`${key}: ${value}`);
+        }
     }
 }
 
