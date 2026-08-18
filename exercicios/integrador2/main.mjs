@@ -40,10 +40,15 @@ console.log('\n----------\n');
 const agora = new Date();
 
 //#region Objetos Inscrição Estadual
+const objetoInvalido = {
+    nome: 'Empresa Inválida'
+};
+
 const IEClass = new IEclss;
 IEClass.setNumero('111');
 IEClass.setEstado('DF');
 IEClass.setDataRegistro(agora);
+//IEClass.setPJ(objetoInvalido);
 IEClass.setPJ(empresa1);
 listAll(IEClass);
 
@@ -53,6 +58,7 @@ const IEFunc = IEfunc();
 IEFunc.setNumero('222');
 IEFunc.setEstado('SP');
 IEFunc.setDataRegistro(agora);
+//IEFunc.setPJ(objetoInvalido);
 IEFunc.setPJ(empresa1);
 listAll(IEFunc);
 
@@ -61,6 +67,7 @@ console.log('\n----------\n');
 IEjson.setNumero('333');
 IEjson.setEstado('RJ');
 IEjson.setDataRegistro(agora);
+//IEjson.setPJ(objetoInvalido);
 IEjson.setPJ(empresa1);
 listAll(IEjson);
 //#endregion
