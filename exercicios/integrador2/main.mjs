@@ -1,6 +1,12 @@
 import PJ from "./pessoas/PJ.mjs";
 import IEclss, { IEfunc, IEjson } from "./objetos/IE.mjs";
 
+function listAll(object){
+    for(let [key, value] of Object.entries(object.getAll())){
+        console.log(`${key}: ${value}`);
+    }
+}
+
 console.log('\n----------\n');
 
 //#region Objetos PJ
@@ -10,10 +16,7 @@ empresa1.setNome('Empresa1');
 empresa1.setEmail('empresa1@email.com');
 empresa1.setCNPJ('AA.AAA.AAA/AAAA-DV');
 empresa1.setRazaoSocial('Empresa1');
-
-for(let [key, value] of Object.entries(empresa1.getAll())){
-    console.log(`${key}: ${value}`);
-}
+listAll(empresa1)
 
 console.log('\n----------\n');
 
@@ -23,10 +26,8 @@ empresa2.setNome('Empresa2');
 empresa2.setEmail('empresa2@email.com');
 empresa2.setCNPJ('AA.AAA.AAA/AAAA-DV');
 empresa2.setRazaoSocial('Empresa2');
+listAll(empresa2)
 
-for(let [key, value] of Object.entries(empresa2.getAll())){
-    console.log(`${key}: ${value}`);
-}
 //#endregion
 
 console.log('\n----------\n');
@@ -39,9 +40,7 @@ IEClass.setNumero('111');
 IEClass.setEstado('DF');
 IEClass.setDataRegistro(agora);
 IEClass.setPJ(empresa1);
-for(let [key, value] of Object.entries(IEClass.getAll())){
-    console.log(`${key}: ${value}`);
-}
+listAll(IEClass);
 
 console.log('\n----------\n');
 
@@ -50,9 +49,7 @@ IEFunc.setNumero('222');
 IEFunc.setEstado('SP');
 IEFunc.setDataRegistro(agora);
 IEFunc.setPJ(empresa1);
-for(let [key, value] of Object.entries(IEFunc.getAll())){
-    console.log(`${key}: ${value}`);
-}
+listAll(IEFunc);
 
 console.log('\n----------\n');
 
@@ -60,7 +57,5 @@ IEjson.setNumero('333');
 IEjson.setEstado('RJ');
 IEjson.setDataRegistro(agora);
 IEjson.setPJ(empresa1);
-for(let [key, value] of Object.entries(IEjson.getAll())){
-    console.log(`${key}: ${value}`);
-}
+listAll(IEjson);
 //#endregion
