@@ -6,7 +6,7 @@ export default class PJ extends Pessoa{
     #razaoSocial;
 
     setCNPJ(cnpj){
-        if (cnpj){
+        if (14 <= cnpj.length <= 18){
             this.#cnpj = cnpj;
             return true;
         }
