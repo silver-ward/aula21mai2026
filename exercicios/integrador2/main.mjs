@@ -78,37 +78,31 @@ console.log('\n----------\n');
 console.log('===== Desafio Extra 2 =====\n');
 
 const empresa3 = new PJ();
-
 empresa3.setNome('Empresa3');
 empresa3.setEmail('empresa3@email.com');
 empresa3.setCNPJ('AA.AAA.AAA/AAAA-DV');
 empresa3.setRazaoSocial('Empresa3');
-listAll(empresa3)
-
-console.log('\n----------\n');
 
 const empresa4 = new PJ();
-
 empresa4.setNome('Empresa4');
 empresa4.setEmail('empresa4@email.com');
 empresa4.setCNPJ('AA.AAA.AAA/AAAA-DV');
 empresa4.setRazaoSocial('Empresa4');
-listAll(empresa4)
-
-console.log('\n----------\n');
 
 const IEClass2 = new IEclss;
 IEClass2.setNumero('444');
 IEClass2.setEstado('MG');
 IEClass2.setDataRegistro(agora);
 IEClass2.setPJ(empresa3);
-console.log(IEClass2.getPJ());
+console.log('resultado de .getPJ().getRazaoSocial():');
+console.log(IEClass2.getPJ().getRazaoSocial());
 
 const IEFunc2 = IEfunc();
 IEFunc2.setNumero('555');
 IEFunc2.setEstado('AM');
 IEFunc2.setDataRegistro(agora);
 IEFunc2.setPJ(empresa4);
-console.log(IEFunc2.getPJ());
+console.log('resultado de .getPJ().getRazaoSocial():');
+console.log(IEFunc2.getPJ().getRazaoSocial());
 
 //#endregion
