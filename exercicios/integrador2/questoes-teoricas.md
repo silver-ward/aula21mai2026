@@ -26,7 +26,9 @@ Essa sintaxe protege os seus dados internos ao criar as suas propriedades como o
 
 ## 7 Qual é a diferença entre o objeto literal `IEjson` e um documento JSON?
 
+O objeto literal usa praticamente a mesma sintaxe do JSON, mas também atua como objeto, portanto aceita métodos e pode executar blocos de código que alteram propriedades dinamicamente.
 
+O JSON, por outro lado, é estático, por isso não pode executar métodos e alterar propriedades dinamicamente. O JSON carrega apenas texto puro e por isso é mais seguro e apropriado para transferir informação via rede.
 
 ## 8 Qual é a diferença entre exportação padrão e exportação nomeada?
 
