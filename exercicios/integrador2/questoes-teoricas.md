@@ -18,7 +18,7 @@ Checar se o argumento passado para o método setPJ() realmente é um objeto da c
 
 ## 5 Qual é a diferença entre a classe `IEclss` e a função fábrica `IEfunc()`?
 
-
+Elas só diferem em sintaxe, mas as duas realizam o mesmo propósito. A classe oferece uma estrutura que precisa ser instanciada com o termo reservado `new`, enquanto que a função é meramente assinalada a uma variável, sendo carregada por completo ao ser chamada.
 
 ## 6 Como a função fábrica protege seus dados internos?
 
