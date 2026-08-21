@@ -6,6 +6,9 @@ function listAll(object){
         if(value instanceof Date){
             console.log(`${key}: ${value.toLocaleString('pt-BR')}`);
         }
+        else if(value instanceof PJ){
+            console.log(`${key}: ${value.getRazaoSocial()}`);
+        }
         else{
             console.log(`${key}: ${value}`);
         }
