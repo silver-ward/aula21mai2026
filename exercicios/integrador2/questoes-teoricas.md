@@ -38,7 +38,13 @@ Já a exportação nomeada, como em `export function IEfunc()`, não define quai
 
 ## 9 Por que `IEclss` utiliza `new`, enquanto `IEfunc()` não utiliza?
 
+A classe é um construtor, uma estrutura que só é concretizada ao ser instanciada por meio de `new`. Quando instanciamos um objeto, os dados desse objeto são alocados na memória separadamente da alocação dos métodos da classe. Ou seja, carregamos os métodos da classe uma vez e, para cada nova instância dessa classe, carregamos apenas os dados, que são diferentes, mas acessamos os mesmos métodos da classe que já foram carregados na memória.
 
+Uma função-fábrica é como um bloco de código que age como uma classe. Dessa forma, não utilizamos `new` e cada vez que assinalamos a função-fábrica a uma variável, temos que carregar tudo novamente na memória: tanto dados quanto funções.
+
+Se instanciamos uma classe 100 vezes, carregamos os dados 100 vezes, mas as funções apenas uma vez.
+
+Se chamarmos uma função-fábrica 100 vezes, carregamos tanto os dados quanto as funções 100 vezes.
 
 ## 10 Qual é a vantagem de organizar as classes e estruturas em arquivos separados?
 
