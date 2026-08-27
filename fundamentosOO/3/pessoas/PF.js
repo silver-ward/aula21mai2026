@@ -1,20 +1,21 @@
-const Pessoa = require("./Pessoa.js")
+const Pessoa = require('./Pessoa');
 
-class PF extends Pessoa{
-    #cpf
+class PF extends Pessoa {
 
-    setCPF(cpf){
-        if(cpf){
+    #cpf;
+
+    setCPF(cpf) {
+        if (cpf) {
             this.#cpf = cpf;
             return true;
-        } else{
+        } else {
             return false;
         }
     }
 
-    getCPF(){
+    getCPF() {
         return this.#cpf;
     }
+    
 }
-
 module.exports = PF;

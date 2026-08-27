@@ -1,7 +1,10 @@
-const Pessoa = require('./Pessoa.js');
-const PF = require('./PF.js');
-const PJ = require('./PJ.js');
-const Aluno = require('./Aluno.js');
+const Pessoa = require('./pessoas/Pessoa.js');
+const PF = require('./pessoas/PF.js');
+const PJ = require('./pessoas/PJ.js');
+const Aluno = require('./pessoas/Aluno.js');
+
+//#region Seção Pessoa
+console.log('\n========== Seção Pessoa ==========\n');
 
 const x = new Pessoa();
 
@@ -23,7 +26,9 @@ if (resposta) {
 } else {
   console.log("E-mail vazio");
 }
+//#endregion
 
+//#region Seção PF
 console.log('\n========== Seção PF ==========\n');
 
 const y = new PF();
@@ -54,7 +59,9 @@ if (resposta){
 }else{
   console.log('CPF inválido.');
 }
+//#endregion
 
+//#region Seção PJ
 console.log('\n========== Seção PJ ==========\n');
 
 const z = new PJ();
@@ -85,7 +92,9 @@ if(resposta){
 else{
   console.log('CNPJ inválido.');
 }
+//#endregion
 
+//#region Seção Aluno
 console.log('\n========== Seção Aluno ==========\n');
 
 const w = new Aluno();
@@ -119,3 +128,4 @@ if (resposta){
 else{
   console.log("Curso inválido")
 }
+//#endregion

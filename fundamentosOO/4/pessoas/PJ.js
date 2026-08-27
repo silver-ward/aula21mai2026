@@ -1,6 +1,7 @@
 const Pessoa = require("./Pessoa");
 
 class PJ extends Pessoa{
+    
     #cnpj;
 
     setCNPJ(cnpj){
