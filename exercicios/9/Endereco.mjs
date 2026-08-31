@@ -35,6 +35,25 @@ export default class Endereco {
         this.#ddd = dados.ddd;
     }
 
+    mostrarEnderecoCompleto(){
+    
+        const emptyMessage = "não informado";
+
+        const enderecoMessage = [
+        `CEP: ${this.getCep() || emptyMessage}`,
+        `Logradouro: ${this.getLogradouro() || emptyMessage}`,
+        `Complemento: ${this.getComplemento() || emptyMessage}`,
+        `Bairro: ${this.getBairro() || emptyMessage}`,
+        `Cidade: ${this.getCidade() || emptyMessage}`,
+        `UF: ${this.getUf() || emptyMessage}`,
+        `Estado: ${this.getEstado() || emptyMessage}`,
+        `Região: ${this.getRegiao() || emptyMessage}`,
+        `DDD: ${this.getDdd() || emptyMessage}`
+        ];
+        
+        return enderecoMessage.join('\n');
+    }
+
     getCep() {
         return this.#cep;
     }

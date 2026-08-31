@@ -1,7 +1,8 @@
 import Endereco from './Endereco.mjs';
 
+const end = new Endereco();
+
 async function usaEndereco() {
-    const end = new Endereco();
 
     try {
         await end.setCep("72015565");
@@ -16,7 +17,7 @@ async function usaEndereco() {
         console.log("Cidade:", end.getCidade() || emptyMessage);
         console.log("UF:", end.getUf() || emptyMessage);
         console.log("Estado:", end.getEstado() || emptyMessage);
-        console.log("Regiao:", end.getRegiao() || emptyMessage);
+        console.log("Região:", end.getRegiao() || emptyMessage);
         console.log("DDD:", end.getDdd() || emptyMessage);
 
     } catch (erro) {
@@ -24,8 +25,9 @@ async function usaEndereco() {
     }
 }
 
-console.log('========== Desafio inicial ==========\n');
-usaEndereco();
 
-console.log('========== Desafio Extra 1 ==========\n');
-usaEndereco();
+console.log('\n========== Desafio Inicial + Extra 1 ==========');
+await usaEndereco();
+
+console.log('\n========== Desafio Extra 2 ==========');
+console.log(`${await end.mostrarEnderecoCompleto()}\n`);
