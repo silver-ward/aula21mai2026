@@ -1,6 +1,7 @@
 export default class Endereco {
     #cep;
     #logradouro;
+    #complemento;
     #bairro;
     #cidade;
     #uf;
@@ -25,6 +26,7 @@ export default class Endereco {
 
         this.#cep = dados.cep;
         this.#logradouro = dados.logradouro;
+        this.#complemento = dados.complemento;
         this.#bairro = dados.bairro;
         this.#cidade = dados.localidade;
         this.#uf = dados.uf;
@@ -39,6 +41,10 @@ export default class Endereco {
 
     getLogradouro() {
         return this.#logradouro;
+    }
+
+    getComplemento(){
+        return this.#complemento;
     }
 
     getBairro() {
