@@ -8,9 +8,8 @@ class PF extends Pessoa {
         if (cpf) {
             this.#cpf = cpf;
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
 
     getCPF() {

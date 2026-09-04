@@ -6,17 +6,12 @@ class Aluno extends PF {
   #curso;
 
   setMatricula(matricula) {
-    if (matricula) {
       if ((matricula.length === 8) &&
           (matricula.startsWith("20"))) {
         this.#matricula = matricula;
         return true;
-      } else {
-        return false;
       }
-    } else {
       return false;
-    }
   }
 
   getMatricula() {
@@ -24,16 +19,13 @@ class Aluno extends PF {
   }
 
   setCurso(curso) {
-    if (curso) {
-      if ((curso === 'ADS') || (curso === 'SI')) {
-        this.#curso = curso;
-        return true;
-      } else {
-        return false;
-      }
-    } else {
-      return false;
+    const cursos = ['ADS', 'SI', 'ES'];
+
+    if (cursos.includes(curso)) {
+      this.#curso = curso;
+      return true;
     }
+    return false;
   }
 
   getCurso() {
